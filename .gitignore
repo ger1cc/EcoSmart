@@ -6,3 +6,6 @@
 .firebase
 *-debug.log
 .runtimeconfig.json
+
+# Specific Credentials
+src/firebase-config.js
