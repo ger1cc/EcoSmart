@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
       provideStorage(() => getStorage()),
       provideMessaging(() => getMessaging())
     ),
-    provideRouter(routes)
+    provideRouter(routes), provideFirebaseApp(() => initializeApp({"projectId":"ecosmart-9263f","appId":"1:8842800996:web:de0a281ec52ddfc72f5471","storageBucket":"ecosmart-9263f.firebasestorage.app","apiKey":"AIzaSyCBLlQEZpBB8xx6t9PRvox8LPusJupsoIc","authDomain":"ecosmart-9263f.firebaseapp.com","messagingSenderId":"8842800996","measurementId":"G-D1E55P3RK3"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideMessaging(() => getMessaging()), provideStorage(() => getStorage())
   ],
 };
