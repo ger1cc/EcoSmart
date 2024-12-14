@@ -8,11 +8,11 @@
 #define LIGHT_SENSOR_PIN 15
 
 // WiFi credentials
-const char ssid[] = "urmomshouse";       // Replace with your WiFi SSID
-const char pass[] = "ustink2024";   // Replace with your WiFi password
+const char ssid[] = "SSID"; 
+const char pass[] = "PASS"; 
 
 // Flask server details
-const char serverIP[] = "54.215.158.62";  // Replace with your Flask server's IP
+const char serverIP[] = "0.0.0.0"; 
 const int serverPort = 5000;              // Flask server port
 
 Servo motor;
@@ -85,13 +85,13 @@ void loop() {
     sendDataToServer(isButtonPressed, lightSensorValue);
 
     // Control motor based on light sensor
-    if (lightSensorValue == 0) { // Low light
+    if (lightSensorValue == 0) {
         motor.write(180); // Move motor to 180 degrees
         Serial.println("Motor moved to 180 degrees (low light)");
-    } else { // Sufficient light
+    } else {
         motor.write(0); // Reset motor to 0 degrees
         Serial.println("Motor reset to 0 degrees (sufficient light)");
     }
 
-    delay(5000); // Wait 5 seconds before sending the next data
+    delay(5000);
 }

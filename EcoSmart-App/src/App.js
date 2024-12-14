@@ -10,7 +10,7 @@ function App() {
     const fetchData = async () => {
       try {
     
-        const response = await fetch('http://54.215.158.62:5000/get-data');
+        const response = await fetch('http://0.0.0.0:5000/get-data');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
